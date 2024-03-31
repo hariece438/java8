@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.stream.*;
+
+class StreamsEvenOdd {
+    public static void main(String[] args) {
+        HelloWorld h=new HelloWorld();
+        h.test();
+    }
+    
+    public void test(){
+        List<Integer> l=new ArrayList<Integer>();
+        l.add(10);
+        l.add(12);
+        l.add(11);
+        l.add(13);
+        
+        List<Integer> evenNumbers = l.stream().filter(s->s%2==0).collect(Collectors.toList());
+        System.out.println(evenNumbers);
+        
+        List<Integer> oddNumbers = l.stream().filter(s->s%2!=0).collect(Collectors.toList());
+        System.out.println(oddNumbers);
+    }
+}
